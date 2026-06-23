@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Bookshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Page fade-in animation */
+    body {
+      opacity: 0;
+      animation: pageFade 0.8s ease forwards;
+    }
+
+    @keyframes pageFade {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* pay button styling with hover grow effect */
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #218838;
+      transform: scale(1.05);
+    }
+
+    /* image fade in and zoom effect */
+    .book-image img {
+      opacity: 0;
+      transform: scale(0.95);
+      animation: fadeInZoom 0.8s ease forwards;
+    }
+
+    @keyframes fadeInZoom {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* book item slide-up effect */
+    .book-item {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 0.8s ease forwards;
+    }
+
+    /* stagger animations for book items and images */
+    .book-item:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .book-item:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .book-item:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    .book-item:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+    .book-item:nth-child(5) {
+      animation-delay: 1s;
+    }
+    .book-item:nth-child(6) {
+      animation-delay: 1.2s;
+    }
+
+    .book-item:nth-child(1) .book-image img {
+      animation-delay: 0.2s;
+    }
+    .book-item:nth-child(2) .book-image img {
+      animation-delay: 0.4s;
+    }
+    .book-item:nth-child(3) .book-image img {
+      animation-delay: 0.6s;
+    }
+    .book-item:nth-child(4) .book-image img {
+      animation-delay: 0.8s;
+    }
+    .book-item:nth-child(5) .book-image img {
+      animation-delay: 1s;
+    }
+    .book-item:nth-child(6) .book-image img {
+      animation-delay: 1.2s;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/book-icon.png" alt="Bookshop Logo">
+      <h1>My Bookshop</h1>
+    </div>
+    <nav>
+      <div class="hamburger" id="hamburger">
+        ☰
+      </div>
+      <ul class="nav-bar" id="nav-links">
+        <li class="menu-heading">My Bookshop</li>
+        <li><a href="index.html">Home</a></li>
+        <!-- pay link removed -->
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="book-list">
+
+      <!-- book 1 -->
+      <div class="book-item">
+        <div class="book-image">
+          <img src="images/book1.jpg" alt="Book 1">
+        </div>
+        <div class="book-info">
+          <h2>Solo leveling</h2>
+          <p>In a world where hunters — human warriors who possess supernatural abilities — must battle deadly monsters to protect mankind, a notoriously weak hunter named Sung Jin-woo struggles to survive.</p>
+          <button onclick="window.location.href='pay.html'">Pay</button>
+        </div>
+      </div>
+
+      <!-- book 2 -->
+      <div class="book-item">
+        <div class="book-image">
+          <img src="images/book2.jpg" alt="Book 2">
+        </div>
+        <div class="book-info">
+          <h2>Shangri La-Frontier</h2>
+          <p>Rakuro loves hunting “trash games,” but one day he jumps into a AAA VR game called Shangri-La Frontier — and what awaits him is beyond anything he's faced before.</p>
+          <button onclick="window.location.href='pay.html'">Pay</button>
+        </div>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="book-item">
+        <div class="book-image">
+          <img src="images/book3.jpg" alt="Book 3">
+        </div>
+        <div class="book-info">
+          <h2>One Piece</h2>
+          <p>Follow Luffy, a young adventurer, as he sets sail across oceans chasing the legendary treasure 'One Piece' to become King of the Pirates!</p>
+          <button onclick="window.location.href='pay.html'">Pay</button>
+        </div>
+      </div>
+
+      <!-- book 4 -->
+      <div class="book-item">
+        <div class="book-image">
+          <img src="images/book4.jpg" alt="Book 4">
+        </div>
+        <div class="book-info">
+          <h2>Hunter X Hunter</h2>
+          <p>Gon Freecss embarks on a journey to become a Hunter and find his legendary father, meeting friends and facing deadly challenges along the way.</p>
+          <button onclick="window.location.href='pay.html'">Pay</button>
+        </div>
+      </div>
+
+      <!-- book 5 -->
+      <div class="book-item">
+        <div class="book-image">
+          <img src="images/book5.jpg" alt="Book 5">
+        </div>
+        <div class="book-info">
+          <h2>Tokyo Ghoul</h2>
+          <p>Ken Kaneki is an ordinary college student until a violent encounter turns him into the first half-human half-ghoul hybrid. Trapped between two worlds, he must survive Ghoul turf wars, learn more about Ghoul society and master his new powers.</p>
+          <button onclick="window.location.href='pay.html'">Pay</button>
+        </div>
+      </div>
+
+      <!-- book 6 -->
+      <div class="book-item">
+        <div class="book-image">
+          <img src="images/book6.jpg" alt="Book 6">
+        </div>
+        <div class="book-info">
+          <h2>Berserk</h2>
+          <p>Set in a medieval Europe–inspired dark fantasy world, the story centers on the characters of Guts, a lone swordsman, and Griffith, the leader of a mercenary band called the "Band of the Hawk".</p>
+          <button onclick="window.location.href='pay.html'">Pay</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+
+  <footer style="height: 60px; background-color: #000000; margin-top: 40px;"></footer>
+</body>
+</html>
